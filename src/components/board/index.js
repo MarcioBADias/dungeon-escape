@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "reactstrap";
 import Hero from "../hero";
 import * as C from './styles';
 
