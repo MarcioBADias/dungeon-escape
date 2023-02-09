@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MediumSize, MediumSizeHeight, MediumSizePosition, MediumSizeWidth, TileSize } from "../../settings/constants";
+import { MediumSizeHeight, MediumSizePosition, MediumSizeWidth, TileSize } from "../../settings/constants";
 
 export const MiniMonster = styled.div`
     animation: miniMonster-animation 1s steps(4) infinite;
