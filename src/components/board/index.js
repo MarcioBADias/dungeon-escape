@@ -1,13 +1,14 @@
 import React from "react";
 import { Container } from "reactstrap";
 import Hero from "../hero";
+import * as C from './styles';
 
 const Board = () => {
     return (
-        <Container>
+        <div>
             <Hero />
-            <img src='./assets/img/tileset.gif' alt="Tabuleiro"/>
-        </Container>
+            <C.Board src='./assets/img/tileset.gif' alt="Tabuleiro"/>
+        </div>
     )
 }
 
