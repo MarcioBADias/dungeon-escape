@@ -1,10 +1,15 @@
 import React from "react";
+import Global from './styles/global';
+import Header from './components/header/index';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      Ola Mundo!
-    </div>
+    <>
+      <Header/>
+      <Global/>
+      <Outlet/>
+    </>
   );
 }
 
