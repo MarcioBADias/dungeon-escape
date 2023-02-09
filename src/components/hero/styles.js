@@ -1,14 +1,13 @@
 import styled from "styled-components";
-import { TileSize } from "../../settings/constants";
+import { MediumSizeHeight, MediumSizePosition, MediumSizeWidth, TileSize } from "../../settings/constants";
 
 export const Hero = styled.div`
     animation: hero-animation 1s steps(4) infinite;
     background-image: url('./assets/img/hero.png');
+    background-position: 0 -${MediumSizePosition}px;
     background-repeat: no-repeat;
-    background-size: ${TileSize*4}px;
-    bottom: ${TileSize*-2}px;
-    left: ${TileSize*-0}px;
-    height: 100px;
+    background-size: ${MediumSizeWidth}px;
+    height: ${MediumSizeHeight}px;
     position: absolute;
     width: ${TileSize}px;
 
@@ -18,7 +17,7 @@ export const Hero = styled.div`
         }
         
         to{
-            background-position-x: -${TileSize*4}px;
+            background-position-x: -${MediumSizeWidth}px;
         }
     }
 `

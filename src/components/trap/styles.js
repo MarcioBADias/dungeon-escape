@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { TileSize } from "../../settings/constants";
+import { LargeSizeWidth, TileSize } from "../../settings/constants";
 
 export const Trap = styled.div`
     animation: trap-animation 1s steps(8) infinite;
     background-image: url('./assets/img/trap.png');
     background-repeat: no-repeat;
-    background-size: ${TileSize*8}px;
+    background-size: ${LargeSizeWidth}px;
     bottom: ${TileSize*8}px;
     left: ${TileSize*5}px;
-    height: 100px;
+    height: ${TileSize}px;
     position: absolute;
     width: ${TileSize}px;
 
@@ -18,7 +18,7 @@ export const Trap = styled.div`
         }
         
         to{
-            background-position-x: -${TileSize*8}px;
+            background-position-x: -${LargeSizeWidth}px;
         }
     }
 `

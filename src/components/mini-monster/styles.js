@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { TileSize } from "../../settings/constants";
+import { MediumSize, MediumSizeHeight, MediumSizePosition, MediumSizeWidth, TileSize } from "../../settings/constants";
 
 export const MiniMonster = styled.div`
     animation: miniMonster-animation 1s steps(4) infinite;
     background-image: url('./assets/img/mini-monster.png');
+    background-position-y: -${MediumSizePosition}px;
     background-repeat: no-repeat;
-    background-size: ${TileSize*4}px;
+    background-size: ${MediumSizeWidth}px;
     bottom: ${TileSize*12}px;
     left: ${TileSize*2}px;
-    height: 100px;
+    height: ${MediumSizeHeight}px;
     position: absolute;
     width: ${TileSize}px;
 
@@ -18,7 +19,7 @@ export const MiniMonster = styled.div`
         }
         
         to{
-            background-position-x: -${TileSize*4}px;
+            background-position-x: -${MediumSizeWidth}px;
         }
     }
 `
