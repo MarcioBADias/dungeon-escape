@@ -5,4 +5,14 @@ export const Hero = styled.div`
     background-repeat: no-repeat;
     height: 100px;
     width: 300px;
+
+    @keyframes hero-animation {
+        from{
+            background-position-x: 0;
+        }
+        
+        to{
+            background-position-x: 192px;
+        }
+    }
 `

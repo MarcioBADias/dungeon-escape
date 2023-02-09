@@ -6,7 +6,7 @@ const Board = () => {
     return (
         <Container>
             <Hero />
-            <img src='./assets/img/tileset.gif' />
+            <img src='./assets/img/tileset.gif' alt="Tabuleiro"/>
         </Container>
     )
 }
