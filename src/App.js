@@ -1,10 +1,12 @@
 import React from "react";
+import { Container } from "reactstrap";
+import Board from "./components/board";
 
 function App() {
   return (
-    <div>
-      Ola Mundo!
-    </div>
+    <Container>
+      <Board />
+    </Container>
   );
 }
 
