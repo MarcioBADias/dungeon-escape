@@ -5,8 +5,9 @@ export const Hero = styled.div`
     animation: hero-animation 1s steps(4) infinite;
     background-image: url('./assets/img/hero.png');
     background-repeat: no-repeat;
-    bottom: 48px;
-    left: 0;
+    background-size: ${TileSize*4}px;
+    bottom: ${TileSize*-2}px;
+    left: ${TileSize*-0}px;
     height: 100px;
     position: absolute;
     width: ${TileSize}px;
@@ -17,7 +18,7 @@ export const Hero = styled.div`
         }
         
         to{
-            background-position-x: -192px;
+            background-position-x: -${TileSize*4}px;
         }
     }
 `

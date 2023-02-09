@@ -26,8 +26,6 @@ export const GameArea = styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 100vh;
-    width: 100vw;
 `
 
 export const BoardArea = styled.div`
