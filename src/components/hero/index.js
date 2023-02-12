@@ -8,6 +8,7 @@ const positionInicital = {
 }
 const Hero = () => {
     const [ heroPosition, setHeroPosition ] = useState(positionInicital);
+    const [ heroDirection, setHeroSirection ] = useState('right');
 
     useEffect(() => {
       const handleKeyUp = e => {
@@ -22,10 +23,12 @@ const Hero = () => {
         if(e.key === 'ArrowRight' || e.key === 'd'){
           const newPosition = { x:++heroPosition.x, y:heroPosition.y };
           setHeroPosition(newPosition);
+          setHeroSirection('right');
         }
         if(e.key === 'ArrowLeft' || e.key === 'a'){
           const newPosition = { x:--heroPosition.x, y:heroPosition.y };
           setHeroPosition(newPosition);
+          setHeroSirection('left')
         }
       };
       
@@ -42,6 +45,7 @@ const Hero = () => {
         style={{
             bottom: `${TileSize*heroPosition.y}px`,
             left: `${TileSize*heroPosition.x}px`,
+            transform: `scaleX(${heroDirection === 'right'? 1 : -1})`
         }}/>
     )
 }
