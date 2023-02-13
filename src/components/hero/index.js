@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { TileSize } from "../../settings/constants";
 import HeroMoviment from "../hooks/heroMoviment";
 import * as C from './styles'
