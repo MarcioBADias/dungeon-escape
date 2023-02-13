@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LargeSizeWidth, LargeTileSize, TileSize } from "../../settings/constants";
+import { LargeSizeWidth, LargeTileSize } from "../../settings/constants";
 
 export const Demon = styled.div`
     animation: demon-animation 1s steps(4) infinite;

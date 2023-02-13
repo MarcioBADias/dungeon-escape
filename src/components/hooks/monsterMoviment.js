@@ -35,7 +35,7 @@ const MonsterMoviment = (initialPosition, moveTime) => {
         ,moveTime*1000);
         
         return () => clearInterval(interval);
-    }, [monsterPosition]);
+    }, [monsterPosition, directions, moveTime, randomIndex]);
 
     return { monsterPosition, monsterDirection }
 }
