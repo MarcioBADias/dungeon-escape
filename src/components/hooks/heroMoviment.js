@@ -29,10 +29,10 @@ const HeroMoviment = (initialPosition) => {
             }
         };
 
-        window.addEventListener('keyup', handleKeyUp);
+        window.addEventListener('keydown', handleKeyUp);
         
         return () => {
-            window.removeEventListener('keyup', handleKeyUp);
+            window.removeEventListener('keydown', handleKeyUp);
         };
     }, [heroPosition]);
 
