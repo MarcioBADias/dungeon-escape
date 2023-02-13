@@ -7,8 +7,6 @@ export const MiniMonster = styled.div`
     background-position-y: -${MediumSizePosition}px;
     background-repeat: no-repeat;
     background-size: ${MediumSizeWidth}px;
-    bottom: ${TileSize*12}px;
-    left: ${TileSize*2}px;
     height: ${MediumSizeHeight}px;
     position: absolute;
     width: ${TileSize}px;

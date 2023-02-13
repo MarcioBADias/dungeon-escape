@@ -10,6 +10,7 @@ export const Hero = styled.div`
     height: ${MediumSizeHeight}px;
     position: absolute;
     width: ${TileSize}px;
+    z-index: 1;
 
     @keyframes hero-animation {
         from{
