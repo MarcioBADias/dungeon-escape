@@ -3,8 +3,13 @@ import { TileSize } from "../../settings/constants";
 import MonsterMoviment from "../hooks/monsterMoviment";
 import * as C from './styles';
 
+const initialPosition = {
+    x:Math.floor(Math.random()*20),
+    y:Math.floor(Math.random()*17)
+}
+
 const Demon = () => {
-    const { monsterPosition, monsterDirection } = MonsterMoviment({x:20,y:9},1);
+    const { monsterPosition, monsterDirection } = MonsterMoviment(initialPosition,1);
 
     return (
         <C.Demon
