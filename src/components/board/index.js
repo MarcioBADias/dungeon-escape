@@ -13,6 +13,9 @@ const Board = () => {
             <Trap />
             <Demon />
             <MiniMonster />
+            <MiniMonster />
+            <MiniMonster />
+            <MiniMonster />
             <Chest />
             <C.Board src='./assets/img/tileset.gif' alt="Tabuleiro"/>
         </div>

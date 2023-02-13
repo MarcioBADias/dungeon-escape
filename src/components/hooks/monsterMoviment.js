@@ -17,10 +17,10 @@ const MonsterMoviment = (initialPosition, moveTime) => {
 
         const monsterMove = setInterval(() => {
             const moviments = {
-                up: { x:monsterPosition.x, y:monsterPosition.y +1 },
-                down: { x:monsterPosition.x, y:monsterPosition.y -1 },
-                right: { x:monsterPosition.x +1, y:monsterPosition.y },
-                left: { x:monsterPosition.x -1, y:monsterPosition.y }
+                up: { x:monsterPosition.x, y:Math.min(monsterPosition.y +1,17) },
+                down: { x:monsterPosition.x, y:Math.max(monsterPosition.y -1,1) },
+                right: { x:Math.min(monsterPosition.x +1,19), y:monsterPosition.y },
+                left: { x:Math.max(monsterPosition.x -1,0), y:monsterPosition.y }
             }
             const moveDirection = Object.keys(directions)[randomIndex];
               
