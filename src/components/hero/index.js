@@ -3,11 +3,6 @@ import { MediumSize, TileSize } from "../../settings/constants";
 import HeroMoviment from "../hooks/heroMoviment";
 import * as C from './styles'
 
-// const initialPosition = {
-//   x:Math.floor(Math.random()*20),
-//   y:Math.floor(Math.random()*17)
-// }
-
 const Hero = ({ initialPosition }) => {
   const { heroPosition, heroDirection } = HeroMoviment(initialPosition);
 

@@ -5,4 +5,5 @@ export const Tile = styled.div`
     position: absolute;
     width: ${TileSize}px;
     height: ${TileSize}px;
+    z-index: 2;
 `;

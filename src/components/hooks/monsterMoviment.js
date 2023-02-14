@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 const MonsterMoviment = (initialPosition, moveTime) => {
     const [ monsterPosition, setMonsterPosition ] = useState(initialPosition);
     const [ monsterDirection, setMonsterDirection ] = useState('right'); 
-    
-    const randomIndex = Math.floor(Math.random()*4);
 
     useEffect(() => {
 
@@ -14,6 +12,8 @@ const MonsterMoviment = (initialPosition, moveTime) => {
             up: 'up', 
             down: 'down' 
         };
+
+        const randomIndex = Math.floor(Math.random()*4);
 
         const monsterMove = setInterval(() => {
             const moviments = {
@@ -37,7 +37,7 @@ const MonsterMoviment = (initialPosition, moveTime) => {
     ,moveTime*1000);
         
     return () => clearInterval(monsterMove);
-}, [monsterPosition, moveTime, randomIndex]);
+}, [monsterPosition, moveTime]);
 
 return { monsterPosition, monsterDirection }
 }

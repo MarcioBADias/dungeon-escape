@@ -3,12 +3,13 @@ import { TileSize } from "../../../settings/constants";
 import * as C from './styles';
 
 const colorMap = {
-    0: 'darkgray',
-    1: 'red',
-    3: 'green',
+    0: 'green',
+    1: 'olive',
+    2: 'black',
+    3: 'yellow',
     4: 'red',
     5: 'red',
-    6: 'red',
+    6: 'aqua',
     7: 'blue'
 };
   

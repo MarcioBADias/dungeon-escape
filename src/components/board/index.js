@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../hero";
 import Chest from "../chest";
 import * as C from './styles';
@@ -8,32 +8,38 @@ import Trap from "../trap";
 import { gridRules } from "../../settings/constants";
 
 const getElementsOnMap = () => {
-    return gridRules.map((gridY, y) => {
-      return gridY.map((gridYX, x) => {
-        const position = { x, y };
-        const marking = gridYX;
-        const key = `${x}-${y}`;  
-        return marking === 7 && <Hero key={key} initialPosition={position} />;
-      });
+  return gridRules.map((gridY, y) => {
+    return gridY.map((gridYX, x) => {
+      const position = { x, y };
+      const marking = gridYX;
+      const key = `${x}-${y}`;
+      if (marking === 4) {
+        return <MiniMonster key={key} initialPosition={position} />;
+      }
+      if (marking === 7) {
+        return <Hero key={key} initialPosition={position} />;
+      }
+      return null; // É necessário retornar algo em todos os casos
     });
-  };
-
-const hero = getElementsOnMap();
+  }).flat(); // É necessário "achatar" o array de elementos
+};
 
 const Board = () => {
-    return (
-        <div>
-            {hero}
-            <Trap />
-            <Demon />
-            <MiniMonster />
-            <MiniMonster />
-            <MiniMonster />
-            <MiniMonster />
-            <Chest />
-            <C.Board src='./assets/img/tileset.gif' alt="Tabuleiro"/>
-        </div>
-    )
-}
+  const [elements, setElements] = useState([]);
+
+  useEffect(() => {
+    setElements(getElementsOnMap());
+  }, []);
+
+  return (
+    <div>
+      {elements}
+      <Trap />
+      <Demon />
+      <Chest />
+      <C.Board src='./assets/img/tileset.gif' alt="Tabuleiro"/>
+    </div>
+  );
+};
 
 export default Board;
