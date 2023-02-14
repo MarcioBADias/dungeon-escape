@@ -1,5 +1,5 @@
 import React from "react";
-import { TileSize } from "../../settings/constants";
+import { MediumSize, TileSize } from "../../settings/constants";
 import MonsterMoviment from "../hooks/monsterMoviment";
 import * as C from './styles'
 
@@ -15,7 +15,7 @@ const MiniMonster = () => {
     return (
         <C.MiniMonster
             style={{
-                bottom: `${TileSize*monsterPosition.y}px`,
+                top: `${TileSize*monsterPosition.y-MediumSize}px`,
                 left: `${TileSize*monsterPosition.x}px`,
                 transform: `scaleX(${monsterDirection === 'right'? 1 : -1})`
         }}/>

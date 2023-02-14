@@ -14,7 +14,7 @@ const Demon = () => {
     return (
         <C.Demon
             style={{
-            bottom: `${TileSize*monsterPosition.y}px`,
+            top: `${TileSize*monsterPosition.y}px`,
             left: `${TileSize*monsterPosition.x}px`,
             transform: `scaleX(${monsterDirection === 'right'? 1 : -1})`
         }}/>

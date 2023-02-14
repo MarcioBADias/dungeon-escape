@@ -3,8 +3,13 @@ import { TileSize } from "../../../settings/constants";
 import * as C from './styles';
 
 const colorMap = {
-    0: 'green',
-    1: 'red'
+    0: 'darkgray',
+    1: 'red',
+    3: 'green',
+    4: 'red',
+    5: 'red',
+    6: 'red',
+    7: 'blue'
 };
   
 const getColorTile = (marking) => colorMap[marking] || 'unknown';

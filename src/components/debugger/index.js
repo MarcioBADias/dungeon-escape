@@ -7,7 +7,8 @@ const getGridMap = () => {
       return gridY.map((gridYX, x) => {
         const position = { x, y };
         const marking = gridYX;
-        return <Tile position={position} marking={marking} />;
+        const key = `${x}-${y}`;
+        return <Tile key={key} position={position} marking={marking} />;
       });
     });
   };

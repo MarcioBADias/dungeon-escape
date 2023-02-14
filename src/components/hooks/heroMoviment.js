@@ -7,14 +7,14 @@ const HeroMoviment = (initialPosition) => {
     useEffect(() => {
         const handleKeyUp = e => {
             const moviments = {
-                ArrowUp: { x:heroPosition.x, y:Math.min(heroPosition.y +1,17) },
-                w: { x:heroPosition.x, y:Math.min(heroPosition.y +1,17) },
-                ArrowDown: { x:heroPosition.x, y:Math.max(heroPosition.y -1,1) },
-                s: { x:heroPosition.x, y:Math.max(heroPosition.y -1,1) },
-                ArrowRight: { x:Math.min(heroPosition.x +1,19), y:heroPosition.y },
-                d: { x:Math.min(heroPosition.x +1,19), y:heroPosition.y },
-                ArrowLeft: { x:Math.max(heroPosition.x -1,0), y:heroPosition.y },
-                a: { x:Math.max(heroPosition.x -1,0), y:heroPosition.y }
+                ArrowUp: { x:heroPosition.x, y:Math.max(heroPosition.y -1,1) },
+                w: { x:heroPosition.x, y:Math.max(heroPosition.y -1,1) },
+                ArrowDown: { x:heroPosition.x, y:Math.min(heroPosition.y +1,18) },
+                s: { x:heroPosition.x, y:Math.min(heroPosition.y +1,18) },
+                ArrowRight: { x:Math.min(heroPosition.x +1,18), y:heroPosition.y },
+                d: { x:Math.min(heroPosition.x +1,18), y:heroPosition.y },
+                ArrowLeft: { x:Math.max(heroPosition.x -1,1), y:heroPosition.y },
+                a: { x:Math.max(heroPosition.x -1,1), y:heroPosition.y }
             }
             const key = e.key;
           
