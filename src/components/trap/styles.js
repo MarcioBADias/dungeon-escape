@@ -6,7 +6,7 @@ export const Trap = styled.div`
     background-image: url('./assets/img/trap.png');
     background-repeat: no-repeat;
     background-size: ${LargeSizeWidth}px;
-    bottom: ${TileSize*8}px;
+    top: ${TileSize*8}px;
     left: ${TileSize*5}px;
     height: ${TileSize}px;
     position: absolute;

@@ -6,7 +6,7 @@ export const Chest = styled.div`
     background-image: url('./assets/img/chest.png');
     background-repeat: no-repeat;
     background-size: ${SmallSize}px;
-    bottom: ${TileSize*5}px;
+    top: ${TileSize*5}px;
     left: ${TileSize*12}px;
     height: ${TileSize}px;
     position: absolute;
