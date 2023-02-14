@@ -13,8 +13,17 @@ const getElementsOnMap = () => {
       const position = { x, y };
       const marking = gridYX;
       const key = `${x}-${y}`;
+      if (marking === 3) {
+        return <Trap key={key} initialPosition={position} />;
+      }
       if (marking === 4) {
         return <MiniMonster key={key} initialPosition={position} />;
+      }
+      if (marking === 5) {
+        return <Demon key={key} initialPosition={position} />;
+      }
+      if (marking === 6) {
+        return <Chest key={key} initialPosition={position} />;
       }
       if (marking === 7) {
         return <Hero key={key} initialPosition={position} />;
@@ -34,9 +43,6 @@ const Board = () => {
   return (
     <div>
       {elements}
-      <Trap />
-      <Demon />
-      <Chest />
       <C.Board src='./assets/img/tileset.gif' alt="Tabuleiro"/>
     </div>
   );
