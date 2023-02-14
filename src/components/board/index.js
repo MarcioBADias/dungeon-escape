@@ -30,7 +30,7 @@ const getElementsOnMap = () => {
       }
       return null; // É necessário retornar algo em todos os casos
     });
-  }).flat(); // É necessário "achatar" o array de elementos
+  }).flat();
 };
 
 const Board = () => {

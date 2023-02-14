@@ -23,9 +23,9 @@ export const HE = 7;
 
 export const gridRules = [
     [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,DR,DR,WL,WL,WL,WL,WL],
-    [WL,FL,FL,WL,CH,FL,TR,FL,WL,CH,FL,FL,FL,DR,DR,FL,WL,FL,CH,WL],
-    [WL,FL,FL,WL,FL,BM,FL,FL,WL,FL,FL,FL,FL,FL,FL,FL,WL,FL,FL,WL],
-    [WL,FL,TR,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,TR,FL,FL,FL,WL],
+    [WL,FL,FL,WL,FL,FL,FL,FL,WL,FL,FL,FL,FL,DR,DR,FL,WL,FL,FL,WL],
+    [WL,FL,FL,WL,CH,FL,TR,FL,WL,CH,FL,FL,FL,FL,FL,FL,WL,FL,CH,WL],
+    [WL,FL,TR,FL,FL,BM,FL,FL,FL,FL,FL,FL,FL,FL,FL,TR,FL,FL,FL,WL],
     [WL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,WL],
     [WL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,WL],
     [WL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,WL],
@@ -43,3 +43,23 @@ export const gridRules = [
     [WL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,FL,WL],
     [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL]
 ];
+
+export const checkValidMoviment = (nextPosition) => {
+    const gridValue = gridRules[nextPosition.y][nextPosition.x];
+    if(gridValue === WL){
+        return false;
+    }
+    if(gridValue === TR){
+        console.log('pisei na Trap!');
+    }
+    if(gridValue === CH){
+        console.log('Peguei o tesouro');
+    }
+    if(gridValue === MM){
+        console.log('Morri!');
+    }
+    if(gridValue === BM){
+        console.log('Morri!');
+    }
+    return true;
+}
