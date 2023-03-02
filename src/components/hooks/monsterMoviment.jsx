@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { checkValidMoviment } from "../../settings/constants";
+
 
 const MonsterMoviment = (initialPosition, moveTime) => {
     const [ monsterPosition, setMonsterPosition ] = useState(initialPosition);

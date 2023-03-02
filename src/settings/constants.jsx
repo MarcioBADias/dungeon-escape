@@ -49,12 +49,10 @@ export const checkValidMoviment = (nextPosition) => {
     if(gridValue === WL){
         return false;
     }
-    if(gridValue === TR){
-        console.log('pisei na Trap!');
-    }
-    if(gridValue === CH){
-        console.log('Peguei o tesouro');
-    }
+
+    // getHeroValidMovies(gridValue);
+    // getMonsterValidMovies(gridValue);
+
     if(gridValue === MM){
         alert('Morri!');
     }
@@ -62,4 +60,22 @@ export const checkValidMoviment = (nextPosition) => {
         alert('Morri!');
     }
     return true;
+}
+
+export const getHeroValidMovies = (gridValue) => {
+    return {
+        valid: gridValue === FL || gridValue === CH || gridValue === TR || gridValue === MM || gridValue === BM,
+        dead: gridValue === TR || gridValue === MM || gridValue === BM,
+        chest: gridValue === CH,
+        door: gridValue === DR
+    }
+}
+
+export const getMonsterValidMovies = (gridValue) => {
+    return {
+        valid: gridValue === FL || gridValue === HE,
+        dead: false,
+        chest: false,
+        door: false
+    }
 }

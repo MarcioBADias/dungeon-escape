@@ -18,7 +18,6 @@ const HeroMoviment = (initialPosition) => {
                 a: { x:heroPosition.x -1, y:heroPosition.y }
             }
             const nextPosition = moviments[e.key];
-            console.log(nextPosition)
             if(nextPosition && checkValidMoviment(nextPosition)){
                 setHeroPosition(nextPosition);
                 if(nextPosition === 'ArrowRight' || nextPosition === 'd'){
